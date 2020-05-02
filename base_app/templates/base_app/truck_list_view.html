@@ -1,0 +1,78 @@
+{#<html>#}
+{#<body>#}
+{#{% for truck in trucks %}#}
+{#    <h1>Truck Details: {{ truck.make }} - {{ truck.model }}</h1>#}
+{#    <h3>Owner : {{ truck.owner.user.username }}</h3>#}
+{#    <h3>Here are all the rents the truck has gone through</h3>#}
+{#    {% for truckrent in truck.truckrent_set.all %}#}
+{#        <h5>Rented to {{ truckrent.user.user.username }}</h5>#}
+{#    {% endfor %}#}
+{#{% endfor %}#}
+{#</body>#}
+{#</html>#}
+{## dei one sec ill be backok#}
+{#<style>#}
+{#    body {#}
+{#        margin: 0;#}
+{#        padding: 0;#}
+{#        height: 100vh;#}
+{#        display: grid;#}
+{#        justify-items: center;#}
+{#        align-items: center;#}
+{#        text-align: center;#}
+{#    }#}
+{##}
+{##}
+{#</style>#}
+{% extends 'base_app/header.html' %}
+{% load static %}
+
+{% block content %}
+
+        <div class="container">
+
+            <div class="row">
+                {% for truck in trucks %}
+                    {% if truck.is_rented %}
+                <div class="col s12 m5 l6">
+                    <div class="card ">
+                        <div class="card-image">
+                            <img src="{{ truck.image.url }}" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h5>Model : {{ truck.model }}</h5>
+                            <h6>Capacity :{{ truck.capacity }} Tons</h6>
+                            <h6>Wheels :{{ truck.wheels }}</h6>
+
+                        </div>
+                        <div class="card-action">
+                            <a href="./{{ truck.id }}/detail" class="waves-effect waves-light btn">Book</a>
+                        </div>
+                    </div>
+                </div>
+                    {% endif %}
+                 {% endfor %}
+            </div>
+
+
+        </div>
+{% endblock content %}
+
+
+{#  <div class="row">#}
+{#    <div class="col s12 m7">#}
+{#      <div class="card">#}
+{#        <div class="card-image">#}
+{#          <img src="images/sample-1.jpg">#}
+{#          <span class="card-title">Card Title</span>#}
+{#        </div>#}
+{#        <div class="card-content">#}
+{#          <p>I am a very simple card. I am good at containing small bits of information.#}
+{#          I am convenient because I require little markup to use effectively.</p>#}
+{#        </div>#}
+{#        <div class="card-action">#}
+{#          <a href="#">This is a link</a>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}

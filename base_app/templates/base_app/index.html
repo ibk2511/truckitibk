@@ -1,0 +1,109 @@
+{% extends 'base_app/header.html' %}
+
+{% load static %}
+{% block content %}
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Just Search</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Load yout truck with single click</h5>
+        </div>
+        <div class="row center">
+          <a href="{% url "signup" %}" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Register</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'assets/background1.jpg' %}" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Speeds up delivery</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide a truck service that incorporate our truck  owners. Additionally, we refined the proper trucks to provide a smoother experience for customers.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User satisfaction  Focused</h5>
+
+            <p class="light">By utilizing the truck service, we were able to create a network which incorporates all the trucks and required service.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with Us</h5>
+
+            <p class="light">We have provided detailed report as well as good service to help new users get started. We are also always open to feedback and can answer any questions a user may have about Truk It.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Fix your price here and select your trucks</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'assets/background2.jpg'%} " alt="Unsplashed background img 2"></div>
+  </div>
+<section id="contactus">
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>About Us</h4>
+          <p class="left-align light">we are the students of kumaraguru college of technology , this is not for real life project this has been made for educational purpose. Soon we will launch this services over the Tamilnadu  </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Feel Free to Contact us</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'assets/background3.jpg' %}" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="footer-copyright">
+      <div class="container">
+   <h5>Developed By IBK</h5>
+      </div>
+    </div>
+  </footer>
+
+{% endblock content %}
+
+

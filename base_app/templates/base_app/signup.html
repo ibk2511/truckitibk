@@ -1,0 +1,71 @@
+{% extends 'base_app/header.html' %}
+{% block content %}
+  <div class="container" style="padding:50px;">
+    <h3 style="color:teal; text-align: center;">Register Here</h3>
+    <div class="row">
+      <form class="col s12" action={% url 'signup' %} method="POST">
+          {% csrf_token %}
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="First Name" id="first_name" name="first_name" type="text" class="validate">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" name="last_name" class="validate">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" name="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" name="password1">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="Confirmpassword" type="password" name="password2">
+            <label for="Confirmpassword">Confirm Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p>
+              <label>
+                <input type="radio" name='user-type' value="OWNER" class="filled-in" />
+                <span>Post a Truck</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s12">
+            <p>
+              <label>
+                <input type="radio" name='user-type' value="CLIENT" class="filled-in"  />
+                <span>Hire a Truck</span>
+              </label>
+            </p>
+          </div>
+        </div>
+
+      <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Phone" name="phone" id="phone" type="text" maxlength=10 minlength=10 class="validate">
+            <label for="phone">Phone</label>
+          </div>
+
+      <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Aadhar ID" name="aadhar" id="aadhar" type="text" maxlength=16 minlength=16 class="validate">
+            <label for="aadhar">Aadhar ID</label>
+          </div>
+          <input type="submit" value="Submit" class="btn waves-effect">
+      </form>
+    </div>
+  </div>
+{% endblock content %}
+

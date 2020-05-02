@@ -1,0 +1,26 @@
+{% extends 'base_app/header.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="container">
+
+            <div class="row">
+                <div class="col s12 m7">
+                    <div class="card ">
+                        <div class="card-image">
+                            <img src="{{ truck.image.url }}" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h5>Model : {{ truck.model }}</h5>
+                            <h6>Capacity :{{ truck.capacity }} Tons</h6>
+                            <h6>Wheels :{{ truck.wheels }}</h6>
+
+                        </div>
+                        <div class="card-action">
+                            <a href="/truck_app/truck_list/{{ truck.id }}/delete" class="waves-effect waves-light btn red">delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}
